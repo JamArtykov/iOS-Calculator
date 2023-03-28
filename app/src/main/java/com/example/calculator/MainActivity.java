@@ -60,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 
+                first = true;
+                result.setText("");
+                operator("AC");
             }
         });
 
@@ -228,6 +231,17 @@ public class MainActivity extends AppCompatActivity {
                 add_op = false;
                 sub_op = false;
                 div_op = true;
+                mult_op = false;
+                break;
+
+            case "AC":
+                button_add.setBackgroundColor(Color.parseColor("#FFA500"));
+                button_div.setBackgroundColor(Color.parseColor("#FFA500"));
+                button_sub.setBackgroundColor(Color.parseColor("#FFA500"));
+                button_div.setBackgroundColor(Color.parseColor("#FFA500"));
+                add_op = false;
+                sub_op = false;
+                div_op = false;
                 mult_op = false;
                 break;
         }
